@@ -68,11 +68,7 @@ BmiApp/
 2. Buka folder proyek di NetBeans atau IDE yang mendukung Maven.
 3. Pastikan JDK yang digunakan sesuai dengan konfigurasi proyek.
 4. Tunggu Maven mengunduh dependensi yang diperlukan.
-5. Jalankan aplikasi menggunakan Maven:
-
-```bash
-mvn clean javafx:run
-```
+5. Jalankan aplikasi menggunakan Maven
 
 ## Rumus BMI
 
