@@ -20,7 +20,7 @@ public class Calculation {
         }
         
         if ( beratB <= 0 || beratB >= 1000){
-            throw new InvalidBeratException ("Berat harus diantara 0-999");
+            throw new InvalidBeratException ("Berat harus diantara 1-999");
         }
         
         this.beratB = beratB;
