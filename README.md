@@ -1,55 +1,99 @@
-# Markdown Cheat Sheet (Example File)
+# BmiApps - BMI Calculator
 
-This is a **generic Markdown template** showcasing essential formatting features.
+Aplikasi kalkulator Indeks Massa Tubuh (Body Mass Index/BMI) berbasis JavaFX.
 
----
+## Deskripsi
 
-## 1. Headers
-# H1 (Largest)
-## H2
-### H3
-#### H4
-##### H5
-###### H6 (Smallest)
+BmiApp merupakan aplikasi desktop sederhana untuk menghitung BMI berdasarkan berat badan dan tinggi badan pengguna. Aplikasi ini dibuat menggunakan Java, JavaFX, FXML, dan Maven.
 
----
+## Tampilan Aplikasi  
+Berikut contoh dari tampilan BMI Calculator
 
-## 2. Text Formatting
-- **Bold** (`**text**` or `__text__`)
-- *Italic* (`*text*` or `_text_`)
-- ~~Strikethrough~~ (`~~text~~`)
-- `Inline Code` (`` `code` ``)
-- > Blockquote (prefix with `>`)
+### 1. Tampilan Utama
+![Tampilan utama BmiApp](screenshots/tampilan-awal.png)  
 
----
+### 2. Hasil Perhitungan BMI
+![Hasil perhitungan BMI](screenshots/hasil.png)  
 
-## 3. Lists
-### Unordered List
-- Item 1
-- Item 2
-  - Nested Item (indent with 2 spaces)
+### 3. Exception Handling
+![Validasi input](screenshots/handling-input-angka.png)  
+![Validasi input](screenshots/handling-tinggi.png)  
+![Validasi input](screenshots/handling-berat.png)
 
-### Ordered List
-1. First item
-2. Second item
-   1. Nested item (indent with 3 spaces)
+## Fitur
 
-### Task List
-- [x] Completed task
-- [ ] Pending task (`[ ]`)
+- Input berat badan dalam kilogram (kg).
+- Input tinggi badan dalam sentimeter (cm).
+- Perhitungan BMI secara otomatis.
+- Tampilan hasil BMI dan indikator kategori.
+- Validasi input dan Exception handling.
 
----
+## Teknologi
 
-## 4. Links
-- [Hyperlink](https://example.com) (`[text](url)`)
+- Java 26
+- JavaFX 21
+- FXML
+- Maven
+- NetBeans IDE
 
----
+## Struktur Proyek
 
-## 5. Code Blocks
-```java
-# Syntax-highlighted block (java)
-class HelloWorld {
-    public static main(String... args) {
-        System.out.println("Hello markdown");
-    }
-}
+```text
+BmiApp/
+├── pom.xml
+├── README.md
+├── .gitignore
+└── src/
+    ├── main/
+    │   ├── java/
+    │   │   ├── controller/
+    │   │   ├── main/
+    │   │   └── model/
+    │   └── resources/
+    │       └── view/
+    │           └── bmi-app.fxml
+    └── test/
+        └── java/
+```
+
+## Persyaratan
+
+- JDK 26 atau versi yang kompatibel dengan konfigurasi proyek.
+- Maven.
+- JavaFX yang dikelola melalui dependensi Maven.
+
+## Cara Menjalankan
+
+1. Clone repositori.
+2. Buka folder proyek di NetBeans atau IDE yang mendukung Maven.
+3. Pastikan JDK yang digunakan sesuai dengan konfigurasi proyek.
+4. Tunggu Maven mengunduh dependensi yang diperlukan.
+5. Jalankan aplikasi menggunakan Maven:
+
+```bash
+mvn clean javafx:run
+```
+
+## Rumus BMI
+
+- BMI dihitung menggunakan rumus:
+
+  BMI = berat badan (kg) / [tinggi badan (m)]²  
+  
+  Tinggi badan dalam sentimeter dikonversi menjadi meter sebelum perhitungan dilakukan.
+
+- Indikator Kategori : 
+
+  Underweight	< 18,5  
+
+  Normal	18,5 – 22,9  
+
+  Overweight	23 – 24,9  
+
+  Obesitas I	25 – 29,9  
+
+  Obesitas II	≥ 30
+
+## Lisensi
+
+Belum ditentukan.
